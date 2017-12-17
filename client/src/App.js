@@ -37,6 +37,8 @@ export default class App extends Component {
     }))
   }
   handleAdd = id => {
+    // do not add master or duplicate inferiors
+    if (this.state.inferior.includes(id) || this.state.master === id) return
     this.setState(prevState => ({
       inferior: [id, ...prevState.inferior],
     }))
