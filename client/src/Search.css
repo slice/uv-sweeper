@@ -1,0 +1,13 @@
+.search {
+  display: block;
+  width: 100%;
+  font: inherit;
+  font-size: 1.5em;
+  padding: 1em;
+  color: #333;
+}
+
+.search:focus,
+.search:active {
+  outline: 0;
+}

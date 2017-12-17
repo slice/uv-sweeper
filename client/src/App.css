@@ -1,0 +1,24 @@
+.error {
+  display: block;
+  background-color: pink;
+  font-family: 'SF Mono', Consolas, monospace;
+  font-family: 0.85rem;
+  padding: 1em;
+}
+
+.ideas {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.ideas .idea {
+  width: 30%;
+  margin: 0 1rem 1rem 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}

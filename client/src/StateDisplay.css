@@ -1,0 +1,25 @@
+.state-display {
+  padding: 1rem;
+  font-size: 2em;
+}
+
+.state-display ul {
+  margin: 0;
+  padding-left: 0.5em;
+  list-style-type: none;
+}
+
+.state-display .master {
+  font-weight: 800;
+}
+
+.state-display-inner {
+  position: fixed;
+}
+
+.state-display pre {
+  width: 100%;
+  background: #eee;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
