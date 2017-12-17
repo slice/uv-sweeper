@@ -65,12 +65,13 @@ export default class App extends Component {
         <Search onChange={this.handleQuery} />
         <main>
           <div className="ideas">{view}</div>
-          {(this.state.master || this.state.inferior) && (
+          {this.state.master || this.state.inferior.length ? (
             <StateDisplay
               master={this.state.master}
               inferior={this.state.inferior}
+              onRemove={this.handleInferiorRemove}
             />
-          )}
+          ) : null}
         </main>
       </div>
     )
