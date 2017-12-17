@@ -26,9 +26,13 @@ export default ({ master, inferior, onRemove }) => {
             </li>
           ))}
         </ul>
-        <pre>
-          <code>{commands}</code>
-        </pre>
+        {commands ? (
+          <pre>
+            <code>{commands}</code>
+          </pre>
+        ) : (
+          <div className="dust">No inferior ideas yet.</div>
+        )}
       </div>
     </div>
   )
