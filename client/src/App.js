@@ -30,7 +30,11 @@ export default class App extends Component {
   }
 
   handleMaster = id => {
-    this.setState({ master: id })
+    // set new master id, remove any inferior that shares the id with new master
+    this.setState(prevState => ({
+      master: id,
+      inferior: prevState.inferior.filter(inf => inf !== id),
+    }))
   }
   handleAdd = id => {
     this.setState(prevState => ({
