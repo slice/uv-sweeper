@@ -37,6 +37,11 @@ export default class App extends Component {
       inferior: [id, ...prevState.inferior],
     }))
   }
+  handleInferiorRemove = id => {
+    this.setState(prevState => ({
+      inferior: prevState.inferior.filter(inf => inf !== id),
+    }))
+  }
 
   render() {
     let view

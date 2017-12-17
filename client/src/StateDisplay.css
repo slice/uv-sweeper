@@ -9,6 +9,13 @@
   list-style-type: none;
 }
 
+.state-display li:hover {
+  color: #d00;
+  text-decoration: underline;
+  text-decoration-skip: ink;
+  cursor: pointer;
+}
+
 .state-display .master {
   font-weight: 800;
 }

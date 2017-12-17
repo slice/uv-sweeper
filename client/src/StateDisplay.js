@@ -2,7 +2,7 @@ import React from 'react'
 
 import './StateDisplay.css'
 
-export default ({ master, inferior }) => {
+export default ({ master, inferior, onRemove }) => {
   const following = inferior
     .slice(1)
     .map(id => `!dupe ${id} -`)
@@ -20,8 +20,8 @@ export default ({ master, inferior }) => {
         </small>
         <div className="master">{master}</div>
         <ul>
-          {inferior.map((id, idx) => (
-            <li key={idx} className="inferior">
+          {inferior.map(id => (
+            <li key={id} onClick={onRemove.bind(null, id)} className="inferior">
               ⬑ {id}
             </li>
           ))}
